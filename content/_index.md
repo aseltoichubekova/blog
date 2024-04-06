@@ -62,29 +62,32 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
+        - title: Technovation Girls
+          company: Tech4impact. USA
           company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
-          date_end: ''
+          location: Кыргызстан 
+          date_start: '2022-09-21'
+          date_end: '2023-05-19'
           description: |2-
+          
               Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+              * ideation
+              * technology
+              * Entrepreneurship
+              * Pitch
+        - title: K2K volontering 
+          company: Friend Asia. South Korea
           company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
-    design:
-      columns: '2'
+          location: Кыргызстан 
+          date_start: '2022-09-19'
+          date_end: '2023-05-25'
+          description: |2-
+          
+              Responsibilities include:
+              * Лидерские качества
+              * Социальное развитие
+              * Саморазвитие
+              * Работа в команде
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
@@ -98,32 +101,29 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://drive.google.com/drive/folders/1foE-8CZmtUpPR7RETUIwbEJZzTM53kmy?usp=drive_link
           date_end: ''
-          date_start: '2021-01-25'
+          date_start: '2023-03-18'
           description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          organization: IMO
+          organization_url: https://imo.kg
+          title: Национальная олимпиада по математике
           url: ''
-        - certificate_url: https://www.edx.org
+        - certificate_url: https://testing.kg
           date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
+          date_start: '2023-11-15'
+          description: Решение задач по математике районного уровня.
+          organization: ЦООМО
+          organization_url: https://testing.kg
+          title: Районная олимпиада по математике.
+          url: ''
+        - certificate_url: ''
+          date_end: ''
+          date_start: '2021-04-19'
+          description: 'Правописание по корейскому языку'
+          organization: Friend Asia
+          organization_url: ''
+          title: Конкурс правописание по корейскому языку. Уровень средний
           url: ''
     design:
       columns: '2'
