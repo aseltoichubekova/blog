@@ -85,31 +85,22 @@ skills:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
-  - icon: envelope
-    icon_pack: fas
-    link: '/#contact'
-  - icon: twitter
+  - icon: autoprefixer
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-    label: Follow me on Twitter
-    display:
-      header: true
+    link: https://independent.academia.edu/AselToychubekova
+  - icon: etsy
+    icon_pack: fab
+    link: https://www.elibrary.ru/project_user_tools.asp?
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://scholar.google.com/citations?hl=en&user=HfTGsYcAAAAJ&view_op=list_works&gmla=ABOlHiw_CrGPfUygQfWTaOppjuHwTTrl0nI0eu6ul-eXXikxvKvVz0BblLJp9NFxJjDoLMdQ8_LN1Pf38DCqC9YA
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
-  - icon: linkedin
+    link: https://github.com/aseltoichubekova/aseltoichubekova.github.io
+  - icon: orcid
     icon_pack: fab
-    link: https://www.linkedin.com/
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
-    link: uploads/resume.pdf
-
+    link: https://orcid.org/my-orcid?orcid=0009-0003-1685-262X&justRegistered=true
+  
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
