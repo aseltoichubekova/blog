@@ -1,22 +1,22 @@
 ---
-title: Example Project
-summary: An example of using the in-built project page.
+title: Работа с Arduino Uno.Выводим цифры.
+summary: В этом проекте мы познакомимся как работать с Arduino uno. А именно будем работать счетырехразрядным семисегментным индикатаром, будем выводить цифры.
 tags:
   - Deep Learning
-date: '2016-04-27T00:00:00Z'
+date: '2024-05-11T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 external_link: ''
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: 
   focal_point: Smart
 
 links:
-  - icon: twitter
+  - icon: github
     icon_pack: fab
     name: Follow
-    url: https://twitter.com/georgecushen
+    url: https://github.com/aseltoichubekova
 url_code: ''
 url_pdf: ''
 url_slides: ''
@@ -30,12 +30,82 @@ url_video: ''
 slides: example
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+# Теоретическое введение
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+**Arduino** – это плата используемая для создания устройств способных взаимодействовать с окружающей средой и воспринимать различные данные из нее при помощи различных датчиков и управляющих устройств, таких как двигатели и т.д. Также это платформа с открытым исходным кодом, основанная на микроконтроллерах. Термин «открытый исходный код» означает, что все ресурсы платы, включая CAD файлы и т.д., находятся в свободном доступе для всех пользователей.
+ Поэтому каждый может изменить их исходя из своих потребностей. Платы Arduino были разработаны для того, чтобы предоставить любому интересующемуся пользователю недорогой и легкий способ создания микроконтроллерных устройств, взаимодействующих с окружающей физической средой.
+Следует выделить 2 сегмента:\
+- Аппаратную часть – саму плату; \
+- Программную часть – которая включает в себя Arduino IDE (простое и легкое в освоении программное обеспечение для написания программ Arduino).
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+Простота и легкость в освоении Arduino сделали данную платформу невероятно популярной по всему миру.
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+**Светодиодный семисегментный индикатор** представляет собой группу светодиодов, расположенных в определенном порядке и объединенных конструктивно. Светодиодные контакты промаркированы метками от a до g (и дополнительно dp – для отображения десятичной точки), и один общий вывод, который определяет тип подключения индикатора (схема с общим анодом ОА, или общим катодом ОК). Зажигая одновременно несколько светодиодов, можно формировать на индикаторе символы цифр.
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+<img src="6.png" alt="drawing" width=100%/>
+
+**Матрица 4-разрядная** из семисегментных индикаторов состоит из четырех семисегментных индикаторов и предназначена для одновременного вывода на матрицу 4 цифр, также есть возможность вывода десятичной точки.
+Для вывода цифры необходимо зажечь нужные светодиоды на контактах A–G и DP и выбрать нужную матрицу подачей LOW на вывод 6, 8, 9 или 12.
+
+<img src="7.png" alt="drawing" width=100%/>
+
+# Основная часть
+
+Мы рассмотрим работу Arduino с 4-разрядной семисегментной матрицей. Получим представление о динамической индикации, позволяющей использовать одни выводы Arduino при выводе информации на несколько семисегментных индикаторов.
+
+Необходимые компоненты: 
+- контроллер Arduino UNO R3; 
+- плата для прототипирования Breadboard; 
+- 4-разрядная семисегментная матрица; 
+- резистор 510 Ом – 8 штук; 
+- кнопка; 
+- резистор 10 кОм; 
+- провода Male-Male (папа-папа).
+
+Подключим контакты матрицы к плате Arduino и будем выводить цифры на различные разряды матрицы. Для подключения нам понадобятся 12 выводов Arduino. Мы будем подключать компоненты на breadbord следуя следующей схеме:
+
+<img src="8.png" alt="drawing" width=100%/>
+
+Соберем схему, параллельно подсматривая на схему выше.
+
+Ножки подключения сегментов A и F  через резисторы поключаю к цифровым выходам D9 и D10 соответственно.
+
+<img src="1.png" alt="drawing" width=100%/>
+
+Ножки подключения разрядов индикатора 2 и 3 подключаю к цифровым выводам D11 и  D12 соответственно. Ножку подеключения сегмента B через резистор подключаю к цифровому выводу D13. 
+
+<img src="2.png" alt="drawing" width=100%/>
+
+Ножки подключения сегментов E, D, DP через резисторы подключаю к цифровым выводам D7, D6, D5 соответственно.
+
+<img src="3.png" alt="drawing" width=100%/>
+
+Ножку подключения  разряда 1 подключаю к цыфровому выводу D8. Ножки подключения сегментов С и G  через резисторы поключаю к цифровым выходам D4 и D3 соответственно. Ножку подключения  разряда 4 подключаю к цыфровому выводу D2.
+
+<img src="4.png" alt="drawing" width=100%/>
+
+Напишем скетч последовательного вывода цифр (0–9) на произвольный регистр матрицы. Для выбора случайного значения из диапазона будем использовать функцию random(). В массиве numbers[] хранятся значения, соответствующие данным для отображения цифр 0–9 (старший разряд байта соответствует метке сегмента A индикатора, а младший – сегменту G), в массиве pins[] – значения контактов для сегментов A–G и DP, в массиве pindigits[] – значения контактов для выбора разряда матрицы.
+
+<img src="9.png" alt="drawing" width=100%/>
+
+<img src="10.png" alt="drawing" width=100%/>
+
+Запустив этот скетч, мы видим, что выводятся цифры от 1 до 9 в произвольных регистрах матрицы. Демонстрацию работы можно посмотреть [по ссылке](https://youtu.be/LRzbzr7O2bY).
+
+Далее модифицируем нашу схему в секундомер, подключив к ней кнопку. 
+
+<img src="5.png" alt="drawing" width=100%/>
+
+Загружаем в плату Arduino следующий скетч:
+
+<img src="11.png" alt="drawing" width=100%/>
+
+<img src="12.png" alt="drawing" width=100%/>
+
+<img src="13.png" alt="drawing" width=100%/>
+
+Запустив скетч, мы видим, что при нажатии на кнопку у нас запускается секундомер, при обратном нажатии он прекращается.  Демонстрацию работы можно посмотреть [по ссылке](https://youtube.com/shorts/sWih8G_qtxo?feature=share).
+
+# Вывод
+
+В этом проекте мы познакомились с 4- разрядной семисегментной матрицей.  Также узнали о динамической индикации, позволяющей использовать одни выводы Arduino  при выводе информации на несколько семисегментных индикаторов. Получили как практические так и теоретические навыки по работе с четырехразрядным семисегментным индикатором.
